@@ -26,7 +26,6 @@ targetCompatibility = 1.8
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
-    //compile ('org.springframework:spring-context:4.1.4.RELEASE')
     compile ('org.springframework:spring-context-support:4.1.4.RELEASE')
     compile ('net.sf.ehcache:ehcache:2.9.0')
     

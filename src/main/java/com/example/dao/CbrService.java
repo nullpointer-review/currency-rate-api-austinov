@@ -55,6 +55,12 @@ public class CbrService {
         cbrDecimalFormat.setParseBigDecimal(true);
     }
 
+    /**
+     * Returns Future object for getting an exchange rate by currency code and date.
+     * @param code Three character currency code.
+     * @param date Date of exchange rate.
+     * @return Future object for getting an exchange rate.
+     */
     @Cacheable(key = "#code.concat(#date.toString())")
     public Future<BigDecimal> getRate(@NotNull String code, @NotNull LocalDate date) {
         log.info("Cache not used: code={}, Date={}", code, date);
